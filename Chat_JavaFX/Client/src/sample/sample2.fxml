@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ap_main" prefHeight="603.0" prefWidth="333.0" style="-fx-background-radius: 40; -fx-border-radius: 40;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Button fx:id="button_send" layoutX="268.0" layoutY="543.0" prefWidth="35.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@send-message.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+        <TextField fx:id="tf_message" layoutX="20.0" layoutY="546.0" prefHeight="38.0" prefWidth="249.0" style="-fx-background-radius: 13;">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+        <ScrollPane fx:id="sp_main" fitToWidth="true" layoutX="17.0" layoutY="130.0" prefHeight="410.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-background-radius: 30; -fx-border-radius: 30;">
+            <content>
+                <VBox fx:id="vbox_messages" alignment="TOP_CENTER" prefHeight="403.0" prefWidth="298.0" style="-fx-background-radius: 40; -fx-border-radius: 40; -fx-background-color: transparent;" />
+            </content>
+        </ScrollPane>
+      <VBox prefHeight="121.0" prefWidth="333.0" style="-fx-background-color: #d9d9d9;">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@user.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="131.0" top="10.0" />
+               </VBox.margin>
+            </ImageView>
+              <Label text="Client">
+                  <font>
+                      <Font name="Arial" size="35.0" />
+                  </font>
+               <VBox.margin>
+                  <Insets left="121.0" />
+               </VBox.margin>
+              </Label>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>
